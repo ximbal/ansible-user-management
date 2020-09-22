@@ -3,7 +3,7 @@
 ##
 - name: Change default SSH port from 22 to 2223
   set_fact:
-    ansible_port:2223
+    ansible_port: 2223
 
 - name: Setup ansible
   hosts: all
