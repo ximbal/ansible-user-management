@@ -1,10 +1,9 @@
 ##
 # Install python into all machines to start using ansible
 ##
-- set_fact:
-    ansible_port: 2223
-
 - name: Setup ansible
+  set_fact:
+    ansible_port: 2223
   hosts: all
   tags: ['pre-deploy']
   gather_facts: no
@@ -19,6 +18,8 @@
       tags: ['ubuntu']
 
 - name: Setup admin users
+  set_fact:
+    ansible_port: 2223
   hosts: all
   gather_facts: yes
   tags: ['users']
